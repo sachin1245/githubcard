@@ -1,0 +1,99 @@
+/*----------------------------------------- ------------------------------*/
+/*----------------------------------------- global styles------------------------------*/
+* {
+  margin: 0;
+  padding: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/*-----------------------------------------  cards ------------------------------*/
+#search {
+  padding-bottom: 15px;
+  border-bottom: solid 1px #eee;
+  margin: 25px 0  15px;
+}
+
+#sort {
+  margin-bottom: 25px;
+}
+#sort span {
+  margin-right: 10px;
+}
+#sort span a {
+  text-decoration: none;
+}
+#sort span a:hover {
+  font-weight: bold;
+}
+
+input {
+  padding: 5px;
+  border-radius: 5px;
+}
+
+button {
+  padding: 5px 10px;
+  background: #28608F;
+  color: white;
+  border-radius: 5px;
+}
+
+.cardsWrapper {
+  display: inline-block;
+  position: relative;
+}
+.cardsWrapper .deleteCard {
+  position: absolute;
+  display: inline-block;
+  top: -1px;
+  right: 5px;
+}
+
+.cards {
+  display: inline-block;
+  color: white;
+  padding: 3px;
+  margin: 30px 20px 0 0;
+  border: solid 2px #e2e2e2;
+  position: relative;
+}
+.cards .cardPhoto img {
+  height: 220px;
+  width: 220px;
+}
+.cards .content {
+  padding-left: 10px;
+  width: 220px;
+  margin-top: 15px;
+  background: white;
+  color: #2e2e2e;
+}
+.cards .content p {
+  display: inline-block;
+  font-size: 15px;
+  padding: 0;
+  margin-bottom: 5px;
+}
+.cards .content p span {
+  font-weight: bold;
+}
+.cards .content .name {
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.cards:hover {
+  border: solid 2px rgba(0, 0, 255, 0.5);
+}
+
+.cards:hover .name, .cards:hover .location, .cards:hover .followers {
+  border-bottom: solid 1px rgba(0, 0, 255, 0.5);
+}

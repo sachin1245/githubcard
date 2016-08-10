@@ -1,0 +1,33 @@
+<form name="myform" ng-submit="getCards(name)" novalidate>
+	<div id="search">
+		<input type="text" placeholder="github login" id="ss" ng-model="name">
+		<button ng-click="getCards(name)">Add</button>
+	</div>
+</form><!-- searchForm -->
+
+
+<div id="sort">
+	<p>Sort by: <span><a href="#/" ng-click="sort('name')">Name</a></span> <span><a href="#/" ng-click="sort('location')">Location</a></span> <span><a href="#/" ng-click="sort('followers')">Followers</a></span></p>
+</div><!-- #sort -->
+
+
+<div class="cardsWrapper" ng-repeat="card in cards | orderBy:sortCard" >
+
+	<p class="deleteCard" ng-click="deleteCard(card)"><img src="../images/close.png" alt="" width="25px" height="25px"></p>
+
+	<a href="{{card.html_url}}" class="cards" >
+		<div class="searchResults" ng-show="card">
+			<div class="cardPhoto">
+				<img src="{{card.avatar_url}}" alt="user photo" class="userPhoto">
+			</div>
+			<div class="content" >
+				<div><p class="name">{{card.name}}</p></div>
+				<div><p class="location"><span>Location: </span>{{card.location}}</p></div>
+				<div><p class="followers"><span>Followers: </span>{{card.followers}}</p></div>
+			</div> <!-- .content -->
+		</div> <!-- .searchResults -->
+	</a> <!-- .cards -->
+</div><!-- .cardsWrapper -->
+	
+
+	
